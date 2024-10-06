@@ -1,11 +1,30 @@
 {
-    "crl": [
+    "image_f": [
         {
-            "name": "JavaScript Essentials 1",
-            "description": "",
-            "imagelink": "https://images.credly.com/size/680x680/images/b93bf373-3da6-4ada-9879-a0c39d6a11f8/image.png",
-            "cr_href":""
+            "id": "bscim",
+            "loc": "/img/proimage.png"
+        }
+        ,
+        {
+            "id": "hndimg",
+            "loc": "img/myhnd.png"
+        }
+    ],
+    "about_me": "I'm Madushan Joel, a passionate and dedicated software engineer with a deep love for solving complex problems through technology. I have a strong foundation in software engineering, with a BTEC HND and a BSc Honours in Computer Science, both of which I completed with first-class honors. My journey has been defined by continuous learning, curiosity, and the drive to stay on top of the latest trends in the tech industry. Currently, I’m working at People’s Leasing and Finance Sri Lanka, utilizing Java Spring Boot and other cutting-edge technologies to deliver innovative solutions. I enjoy taking on new challenges, whether it’s building apps, contributing to open-source projects. My ultimate goal is to make an impact through the projects I create and the knowledge I share, always aiming for growth and excellence.",
+    "expriance": [
+        {
+            "companynme": "People's Leaseing and finance",
+            "startDate": "2023-01",
+            "enddate": "Present",
+            "role": "Senior Software Developer",
+            "des": "I started my career as a software developer(2023) & promoted as an Senior Software Developer  specialize in developing Restful APIs , Web application using Java's Spring Boot framework for both mobile and web applications. Additionally, I am responsible for maintaining and debugging the backend code for mobile app variants of the core system. This includes ensuring smooth performance and addressing any issues that may arise."
         },
-        {}
+        {
+            "companynme": "MobiOS",
+            "startDate": "2019-06",
+            "enddate": "2019-10",
+            "role": "Intern Software Developer",
+            "des": ""
+        }
     ]
 }
