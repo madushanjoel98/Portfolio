@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madushan Joel's Portfolio</title>
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Animate.css for animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- Custom CSS -->
   <style>
     body {
       background-color: #f4f4f4;
     }
+
     .navbar {
       background-color: #333;
     }
-    .navbar-brand, .nav-link {
+
+    .navbar-brand,
+    .nav-link {
       color: white !important;
     }
+
     .hero-section {
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('your-hero-image.jpg') no-repeat center center;
+      background: url('/img/imgprnm.png') no-repeat center center;
+      background-color: #333;
       background-size: cover;
       color: white;
     }
+
     .hero-text {
       text-align: center;
+
     }
+
     .projects {
       padding: 50px 0;
     }
+
     .contact-section {
       background-color: #333;
       color: white;
       padding: 50px 0;
     }
+
+    .nametext {
+
+      font-size: 120px;
+      -webkit-text-stroke: 10%;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .title_hero {
+      background-color: #000000;
+      opacity: 0.9;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <!-- <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Madushan Joel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,13 +92,13 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- Hero Section -->
   <section class="hero-section animate__animated animate__fadeIn bg-primary">
     <div class="hero-text">
-      <h1 class="animate__animated animate__fadeInDown">Madushan Joel</h1>
-      <p class="animate__animated animate__fadeInUp">Experienced Software Developer</p>
+      <h1 class="animate__animated animate__fadeInDown nametext">Madushan Joel</h1>
+      <p class="animate__animated animate__fadeInUp title_hero">Experienced Software Developer</p>
     </div>
   </section>
 
@@ -82,20 +107,109 @@
     <div class="row">
       <div class="col-md-6">
         <h2>About Me</h2>
-        <p>Hello! I'm Madushan Joel, a passionate software engineer with expertise in Java Spring Boot, Node.js, MySQL, and more. I specialize in building scalable applications and I'm always excited to take on new challenges.</p>
+        <p>Hello! I'm Madushan Joel, a passionate software engineer with expertise in Java Spring Boot, Node.js, MySQL,
+          and more. I specialize in building scalable applications and I'm always excited to take on new challenges.</p>
       </div>
       <div class="col-md-6">
-        <img src="your-profile-pic.jpg" class="img-fluid rounded" alt="Madushan Joel">
+        <!-- <img src="/img/image.png" class="img-fluid rounded" alt="Madushan Joel" width="230px"> -->
       </div>
     </div>
   </section>
-<!-- Achievements Section -->
-<!-- Achievements Section with Horizontal Scrolling -->
-<section id="achievements" class="container my-5">
-    <h2 class="text-center">Achievements</h2>
-    
+  <!-- Achievements Section -->
+  <!-- Achievements Section with Horizontal Scrolling -->
+  <section id="achievements" class="container my-5">
+    <h2 class="text-center">Educational Achievements</h2>
+
     <!-- Horizontal Scrolling Container -->
-    <div id="scrolling-gallery" class="scrolling-container" style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+    <div id="" class="scrolling-container scrolling-gallery"
+      style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+      <div class="d-inline-block animate__animated animate__fadeIn">
+        <!-- Image 1 -->
+        <div class="card mx-2 d-inline-block" style="width: 300px;">
+          <img src="/img/proimage.png" class="card-img-top" alt="Achievement 1" width="100px">
+          <div class="card-body">
+            <b class="card-text text-wrap">BSC hons. in computer Science</b>
+            <p class="card-text text-wrap">completed his BSc Honours in Computer Science with a specialization in
+              Software Engineering from Kingston University, achieving first-class honors. </p>
+          </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="card mx-2 d-inline-block" style="width: 300px;">
+          <img src="img/myhnd.png" class="card-img-top" alt="Achievement 2">
+          <div class="card-body">
+            <b class="card-text text-wrap">BTEC HND in Software Engineering </b>
+            <p class="card-text text-wrap">completed Pearson BTEC HND in Software Engineering achieving Merit. </p>
+          </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="card mx-2 d-inline-block" style="width: 300px;">
+          <img src="/img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <div class="card-body">
+            <b class="card-text text-wrap">Diploma in English </b>
+            <p class="card-text text-wrap">completed Pearson Diploma in English Merit. </p>
+          </div>
+        </div>
+        <div class="card mx-2 d-inline-block" style="width: 300px;">
+          <img src="/img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <div class="card-body">
+            <b class="card-text text-wrap">Certificate in Android app Development </b>
+            <p class="card-text text-wrap">completed Pearson Certificate in Android app Development with java. </p>
+          </div>
+        </div>
+        <div class="card mx-2 d-inline-block" style="width: 300px;">
+          <img src="/img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <div class="card-body">
+            <b class="card-text text-wrap">Diploma in Software Engineering </b>
+            <p class="card-text text-wrap">completed Pearson Software Engineering. </p>
+          </div>
+        </div>
+        <!-- Add more images similarly -->
+      </div>
+    </div>
+  </section>
+  <section id="achievements" class="container my-5">
+    <h2 class="text-center">Licenses & certifications</h2>
+
+    <!-- Horizontal Scrolling Container -->
+    <div id="" class="scrolling-container scrolling-gallery"
+      style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+      <div class="d-inline-block animate__animated animate__fadeIn">
+        <!--  -->
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8d6a0b89-986c-428a-8e46-0702b9a2ea01"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <!-- Image 1 -->
+        <div class="card-text text-wrap" data-iframe-width="290" data-iframe-height="290"
+          data-share-badge-id="4933e240-6339-467f-b7e8-f80e35fdf55d" data-share-badge-host="https://www.credly.com">
+        </div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <!-- Image 2 -->
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="e4d6e789-ccd9-4271-abed-6e7b5fde80f6"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <!-- Image 3 -->
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="834d6147-bd05-4ef6-980b-587be08b0181"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <!--  -->
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="689c63b6-f25c-46be-8909-650333d72877"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <!--  -->
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8dba84cd-e52b-414b-a79e-788994d3ea1c"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects -->
+  <section id="achievements" class="container my-5">
+    <h2 class="text-center">Projects</h2>
+
+    <!-- Horizontal Scrolling Container -->
+    <div id="" class="scrolling-container scrolling-gallery"
+      style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
       <div class="d-inline-block animate__animated animate__fadeIn">
         <!-- Image 1 -->
         <div class="card mx-2 d-inline-block" style="width: 300px;">
@@ -122,76 +236,41 @@
       </div>
     </div>
   </section>
-  
   <!-- Add JavaScript for Auto Horizontal Scrolling -->
   <script>
-    const scrollingContainer = document.getElementById('scrolling-gallery');
-  
+    const scrollingContainers = document.getElementsByClassName('scrolling-gallery');
+
     // Auto-scroll function (horizontal)
-    function autoScroll() {
-      scrollingContainer.scrollBy(1, 0); // Scroll 1 pixel to the right
-      if (scrollingContainer.scrollLeft + scrollingContainer.clientWidth >= scrollingContainer.scrollWidth) {
-        scrollingContainer.scrollLeft = 0; // If end is reached, go back to the start
+    function autoScroll(container) {
+      container.scrollBy(1, 0); // Scroll 1 pixel to the right
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        container.scrollLeft = 0; // If end is reached, go back to the start
       }
     }
-  
-    // Start auto-scrolling
-    let scrollInterval = setInterval(autoScroll, 50); // Speed of auto-scroll (50ms = slower scroll)
-  
-    // Pause auto-scrolling when mouse enters the container, and restart when mouse leaves
-    scrollingContainer.addEventListener('mouseenter', () => {
-      clearInterval(scrollInterval);
-    });
-    scrollingContainer.addEventListener('mouseleave', () => {
-      scrollInterval = setInterval(autoScroll, 50);
+
+    // Set up auto-scrolling for each container
+    Array.from(scrollingContainers).forEach(container => {
+      let scrollInterval = setInterval(() => autoScroll(container), 50); // Speed of auto-scroll (50ms = slower scroll)
+
+      // Pause auto-scrolling when mouse enters the container, and restart when mouse leaves
+      container.addEventListener('mouseenter', () => {
+        clearInterval(scrollInterval);
+      });
+
+      container.addEventListener('mouseleave', () => {
+        scrollInterval = setInterval(() => autoScroll(container), 50);
+      });
     });
   </script>
-  
+
   <!-- Projects Section -->
-  <section id="projects" class="projects container my-5">
-    <h2 class="text-center">Projects</h2>
-    <div class="row mt-4">
-      <!-- Project 1 -->
-      <div class="col-md-4 animate__animated animate__zoomIn">
-        <div class="card">
-          <img src="project1.jpg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Project Title 1</h5>
-            <p class="card-text">Brief description of your project.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-md-4 animate__animated animate__zoomIn">
-        <div class="card">
-          <img src="project2.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Project Title 2</h5>
-            <p class="card-text">Brief description of your project.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-md-4 animate__animated animate__zoomIn">
-        <div class="card">
-          <img src="project3.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Project Title 3</h5>
-            <p class="card-text">Brief description of your project.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="text-center">Contact Me</h2>
-      
+
     </div>
   </section>
 
@@ -199,4 +278,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
