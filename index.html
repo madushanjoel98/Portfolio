@@ -67,6 +67,28 @@
       background-color: #000000;
       opacity: 0.9;
     }
+    #skills .skill-badge {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    #skills .skill-badge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #skills .skill-icon {
+      margin-right: 8px;
+    }
+
+    /* Responsive Wrapping */
+    #skills .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   </style>
 </head>
 
@@ -115,7 +137,14 @@
       </div>
     </div>
   </section>
-  <!-- Achievements Section -->
+  <section id="skills" class="container my-5">
+    <h2 class="text-center mb-4">My Skills</h2>
+    <!-- Badges Container -->
+    <div class="badges-container" id="skiller">
+    </div>
+  </section>
+  
+  
   <!-- Achievements Section with Horizontal Scrolling -->
   <section id="achievements" class="container my-5">
     <h2 class="text-center">Educational Achievements</h2>
@@ -212,50 +241,27 @@
       </div>
     </div>
   </section>
-  
-  <!-- projects -->
   <section id="achievements" class="container my-5">
     <h2 class="text-center">Projects</h2>
 
-    <!-- Horizontal Scrolling Container -->
+    <!-- Vertical Scrolling Container -->
     <div id="" class="scrolling-container scrolling-gallery"
-      style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
-      <div class="d-inline-block animate__animated animate__fadeIn">
+      style="max-height: 500px; overflow-y: auto;">
+      <div class="animate__animated animate__fadeIn" id="projecter">
         <!-- Image 1 -->
-        <div class="card mx-2 d-inline-block" style="width: 300px;">
-          <img src="achievement1.jpg" class="card-img-top" alt="Achievement 1">
-          <div class="card-body">
-            <p class="card-text">Achievement Title 1</p>
-          </div>
-        </div>
-        <!-- Image 2 -->
-        <div class="card mx-2 d-inline-block" style="width: 300px;">
-          <img src="achievement2.jpg" class="card-img-top" alt="Achievement 2">
-          <div class="card-body">
-            <p class="card-text">Achievement Title 2</p>
-          </div>
-        </div>
-        <!-- Image 3 -->
-        <div class="card mx-2 d-inline-block" style="width: 300px;">
-          <img src="achievement3.jpg" class="card-img-top" alt="Achievement 3">
-          <div class="card-body">
-            <p class="card-text">Achievement Title 3</p>
-          </div>
-        </div>
+      
         <!-- Add more images similarly -->
       </div>
     </div>
-  </section>
-  <!-- Add JavaScript for Auto Horizontal Scrolling -->
-
-
-  <!-- Projects Section -->
+</section>
 
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="text-center">Contact Me</h2>
+      <b>madushanjoel@gmail.com</b>
+      
 
     </div>
   </section>
