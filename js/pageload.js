@@ -1,5 +1,5 @@
 let images = null;
-var jsonloc = 'https://raw.githubusercontent.com/madushanjoel98/Portfolio/refs/heads/main/myprofile.json';
+var jsonloc = 'js/myprofile.json';
 
 $(document).ready(function () {
     loadJson();
@@ -14,6 +14,7 @@ function loadJson() {
         // Display the data
         images = data.image_f;
         console.log(images);
+        $('#containscv').attr('content', data.about_me);
         $("#abut_text").html(data.about_me);
         loadExpriance(data);
         loadimages(data.image_f);
