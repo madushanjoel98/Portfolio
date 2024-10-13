@@ -1,5 +1,5 @@
 let images = null;
-var jsonloc = 'myprofile.json';
+var jsonloc = 'https://raw.githubusercontent.com/madushanjoel98/Portfolio/refs/heads/main/myprofile.json';
 $(document).ready(function () {
     loadJson();
     loadAnimatiom();
