@@ -1,5 +1,5 @@
 let images = null;
-var jsonloc = '/myprofile.json';
+var jsonloc = 'myprofile.json';
 $(document).ready(function () {
     loadJson();
     loadAnimatiom();
