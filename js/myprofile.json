@@ -176,5 +176,27 @@
             "icon":"img/insta_icon.png",
             "data": "madushanjoel@gmail.com"
         }
+    ],
+    "socialme":[
+        {
+            "name":"github",
+            "link":"https://github.com/madushanjoel98",
+            "img":"img/github.png"
+        },
+        {
+            "name":"LinkedIn",
+            "link":"https://lk.linkedin.com/in/madushan-joel-47b790104",
+            "img":"img/linkl.png"
+        },
+        {
+            "name":"TeacherOn",
+            "link":"https://www.teacheron.com/tutor/9WXw",
+            "img":"img/teacheron.jpg"
+        },
+        {
+            "name":"instagram",
+            "link":"https://www.instagram.com/mj_boy98/p/C_vp6yYovvp/",
+            "img":"img/instagram.png"
+        }
     ]
 }

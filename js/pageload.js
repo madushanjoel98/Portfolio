@@ -21,6 +21,7 @@ function loadJson() {
         loadProjects(data.projects);
         skillCapus(data.skills);
         loadContactME(data.contact);
+        loadSome(data.socialme);
     });
 
 }
@@ -154,6 +155,22 @@ function loadContactME(data) {
  </div>`;
         $("#contacwt").append(layout);
     });
+
+}
+
+function loadSome(data) {
+    data.forEach(element => {
+
+        var layout = ` 
+          <div class="col col-lg-3">
+         <a href="${element.link}"><img src="${element.img}" alt="" width="30%"></a>
+        </div>
+        
+        `;
+
+        $("#socm").append(layout);
+    });
+
 
 }
 // Example usage:
