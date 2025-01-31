@@ -28,6 +28,13 @@
     ],
     "projects": [
         {
+            "name": "PLC Lead Management System",
+            "start_date": "Nov 2024",
+            "end_date": "Present",
+            "associated_with": "People's Leasing & Finance PLC",
+            "description": "The Lead Management System (LMS) is a dynamic platform designed to streamline lead generation, tracking, and conversion across multiple branches. It enables campaigns at branch, regional, and national levels, allowing seamless collaboration between marketing teams. Leads are sourced from various channels, including digital platforms, promotions, call centers, car sales, walk-ins, and telephone inquiries, and are directed to a centralized branch interface for efficient processing."
+        },
+        {
             "name": "PLC Touch App",
             "start_date": "August 2023",
             "end_date": "Present",
