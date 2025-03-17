@@ -170,40 +170,56 @@
         "Jsp",
         "JPA",
         "ML",
-        "PHP", "Ads Management","Software architecturing"
+        "PHP",
+        "Ads Management",
+        "Software architecturing"
     ],
     "contact": [
         {
             "channel": "email",
-            "icon":"img/email_3694396.png",
+            "icon": "img/email_3694396.png",
             "data": "madushanjoel@gmail.com"
         },
         {
             "channel": "Instagram",
-            "icon":"img/insta_icon.png",
+            "icon": "img/insta_icon.png",
             "data": "madushanjoel@gmail.com"
         }
     ],
-    "socialme":[
+    "socialme": [
         {
-            "name":"github",
-            "link":"https://github.com/madushanjoel98",
-            "img":"img/github.png"
+            "name": "github",
+            "link": "https://github.com/madushanjoel98",
+            "img": "img/github.png"
         },
         {
-            "name":"LinkedIn",
-            "link":"https://lk.linkedin.com/in/madushan-joel-47b790104",
-            "img":"img/linkl.png"
+            "name": "LinkedIn",
+            "link": "https://lk.linkedin.com/in/madushan-joel-47b790104",
+            "img": "img/linkl.png"
         },
         {
-            "name":"TeacherOn",
-            "link":"https://www.teacheron.com/tutor/9WXw",
-            "img":"img/teacheron.jpg"
+            "name": "TeacherOn",
+            "link": "https://www.teacheron.com/tutor/9WXw",
+            "img": "img/teacheron.jpg"
         },
         {
-            "name":"instagram",
-            "link":"https://www.instagram.com/mj_boy98/p/C_vp6yYovvp/",
-            "img":"img/instagram.png"
+            "name": "instagram",
+            "link": "https://www.instagram.com/mj_boy98/p/C_vp6yYovvp/",
+            "img": "img/instagram.png"
+        }
+    ],
+    "onlive": [
+        {
+            "name": "Bramuda Transaction Classification",
+            "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
+            "img": "img/brmptcx.png",
+            "url": "https://alphasl.pythonanywhere.com/"
+        },
+        {
+            "name": "ToolSpark",
+            "description": "Explore ToolSpark versatile online tools, including a WhatsApp Chat Viewer for exported chats, Base64 encoder/decoder,QR genrator Morse code translator, and more. Fast, secure, and user-friendly utilities for your daily needs",
+            "img": "img/toolspark.png",
+            "url": "https://madushanjoel98.github.io/utils/"
         }
     ]
 }

@@ -22,6 +22,7 @@ function loadJson() {
         skillCapus(data.skills);
         loadContactME(data.contact);
         loadSome(data.socialme);
+        liveProject(data.onlive);
     });
 
 }
@@ -173,5 +174,25 @@ function loadSome(data) {
 
 
 }
+
+function liveProject(data) {
+    //livepr
+    var element = ``;
+    data.forEach(element => {
+        element = `
+        <div class="card mt-3">
+        <h5 class="card-header"> <img width="50px" alt="images" src="${element.img}"> ${element.name}</h5>
+        <div class="card-body">
+           
+            <p>${element.description}</p>
+         <a class="text-primary nav-item" href="${element.url}">Explore</a>
+        </div>
+        </div>
+        `;
+        $("#livepr").append(element);
+    });
+
+}
+
 // Example usage:
 
