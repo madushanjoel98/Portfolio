@@ -185,7 +185,7 @@ function liveProject(data) {
         <div class="card-body">
            
             <p>${element.description}</p>
-         <a class="text-primary nav-item" href="${element.url}">Explore</a>
+         <a class=" btn btn-primary" href="${element.url}">Explore <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         </div>
         `;
