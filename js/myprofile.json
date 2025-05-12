@@ -221,5 +221,14 @@
             "img": "img/toolspark.png",
             "url": "https://madushanjoel98.github.io/utils/"
         }
+
+,
+{
+            "name": "Ottasker",
+            "description": "Ottasker Flask Template is a well-structured, open-source Flask boilerplate designed to streamline and accelerate web application development with a focus on clean architecture and maintainability. It provides an organized project structure, seamless blueprint management, and clearly defined request and response models to standardize API behavior. Application configurations are easily managed through intuitive JSON files, allowing for efficient customization. Ottasker comes equipped with built-in support for JWT-based authentication, CORS settings, and robust logging management, making it ideal for both small-scale projects and scalable systems. Whether you're prototyping or building a production-grade app, Ottasker offers a reliable foundation for developing clean and modular Flask applications.",
+"img": "https://raw.githubusercontent.com/madushanjoel98/flask_template/refs/heads/main/static/img/otterimage2copy.png",
+            "url": "https://madushanjoel98.github.io/OttaskerWebPage/"
+        }
+
     ]
 }
