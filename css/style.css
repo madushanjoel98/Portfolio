@@ -1,0 +1,101 @@
+body {
+      background-color: #f4f4f4;
+      padding-top: 70px; /* Added for fixed-top navbar */
+    }
+
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+    }
+
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('../img/proimage.png') no-repeat center center;
+      background-color: #333;
+      background-size: cover;
+      color: white;
+    }
+
+    .hero-text {
+      text-align: center;
+
+    }
+
+    .projects {
+      padding: 50px 0;
+    }
+
+    .contact-section {
+      background-color: #333;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .nametext {
+
+      font-size: 50px;
+      -webkit-text-stroke: 10%;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .title_hero {
+      background-color: #000000;
+      opacity: 0.9;
+    }
+    #skills .skill-badge {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    #skills .skill-badge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #skills .skill-icon {
+      margin-right: 8px;
+    }
+
+    /* Responsive Wrapping */
+    #skills .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Custom classes for inline styles */
+    .horizontal-scroll-container {
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .vertical-scroll-container {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .custom-card-width {
+      width: 300px;
+    }
+
+    /* Interactive card hover effect */
+    .interactive-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .interactive-card:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }

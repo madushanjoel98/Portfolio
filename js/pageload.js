@@ -1,5 +1,4 @@
-let images = null;
-var jsonloc = 'js/myprofile.json';
+const jsonloc = 'js/myprofile.json'; // Changed var to const
 
 $(document).ready(function () {
     loadJson();
@@ -12,17 +11,21 @@ function loadJson() {
 
     $.getJSON(jsonloc, function (data) {
         // Display the data
-        images = data.image_f;
-        console.log(images);
+        // images = data.image_f; // Removed assignment
+        // console.log(images); // Removed console.log
         $('#containscv').attr('content', data.about_me);
         $("#abut_text").html(data.about_me);
         loadExpriance(data);
-        loadimages(data.image_f);
+        loadimages(data.image_f); // data.image_f is passed directly
         loadProjects(data.projects);
         skillCapus(data.skills);
         loadContactME(data.contact);
         loadSome(data.socialme);
         liveProject(data.onlive);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.error("Error loading profile data (myprofile.json):", textStatus, errorThrown);
+        // Optionally, display a user-friendly message on the page
     });
 
 }
@@ -37,8 +40,8 @@ function loadExpriance(data) {
 }
 
 function renderProject(compname, position, start, end, des) {
-    let elo = `
-      <div class="card mb-3">
+    const elo = ` 
+      <div class="card mb-3 interactive-card">
         <div class="card-body">
           <h5 class="card-title"><b>${compname}</b></h5>
           <h6 class="card-subtitle mb-2 text-muted">${position}</h6>
@@ -66,7 +69,7 @@ function loadAnimatiom() {
 
     // Set up auto-scrolling for each container
     Array.from(scrollingContainers).forEach(container => {
-        let scrollInterval = setInterval(() => autoScroll(container), 50); // Speed of auto-scroll (50ms = slower scroll)
+        let scrollInterval = setInterval(() => autoScroll(container), 50); // scrollInterval is reassigned
 
         // Pause auto-scrolling when mouse enters the container, and restart when mouse leaves
         container.addEventListener('mouseenter', () => {
@@ -92,7 +95,7 @@ function loadProjects(data) {
 
     data.forEach(element => {
 
-        var layout = ` <div class="card mb-2">
+        const layout = ` <div class="card mb-2 interactive-card">
       <div class="card-body">
         <b class="card-text text-wrap">${element.name}</b>
         </br>
@@ -101,7 +104,7 @@ function loadProjects(data) {
         <small>${element.start_date} - ${element.end_date} </small>
         <p class= "text-wrap">${element.description}</p>
       </div>
-    </div>`;
+    </div>`; 
 
         $("#projecter").append(layout);
     });
@@ -110,11 +113,11 @@ function loadProjects(data) {
 }
 
 function skillCapus(data) {
-    var darkColor = getRandomDarkColor();
+    // const darkColor = getRandomDarkColor(); // This would make all badges the same color from the first call
     data.forEach(element => {
-        var cap = `<span class="badge badge-pill skill-badge text-white" style="background-color: ${getRandomDarkColor()};">
+        const cap = `<span class="badge badge-pill skill-badge text-white" style="background-color: ${getRandomDarkColor()};">
                   ${element}
-                  </span>`;
+                  </span>`; 
         $("#skiller").append(cap);
     });
 
@@ -136,7 +139,7 @@ function getRandomDarkColor() {
         return 0.2126 * r + 0.7152 * g + 0.0722 * b;
     }
 
-    let r, g, b, luminance;
+    let r, g, b, luminance; 
 
     // Loop until we get a color with a luminance value low enough for white text
     do {
@@ -144,17 +147,17 @@ function getRandomDarkColor() {
         g = randomInt(0, 255);
         b = randomInt(0, 255);
         luminance = calculateLuminance(r, g, b);
-    } while (luminance > 180); // Adjust threshold to control the darkness (lower = darker)
+    } while (luminance > 180); 
 
     // Return the random dark color in hex format
     return rgbToHex(r, g, b);
 }
 function loadContactME(data) {
     data.forEach(element => {
-        var layout = ` <div>
+        const layout = ` <div>
   <a href="${element.data}"><img src="${element.icon}" alt="" width="60px"></a>
- </div>`;
-        $("#contacwt").append(layout);
+ </div>`; 
+        $("#contacwt").append(layout); 
     });
 
 }
@@ -162,12 +165,12 @@ function loadContactME(data) {
 function loadSome(data) {
     data.forEach(element => {
 
-        var layout = ` 
+        const layout = ` 
           <div class="col col-lg-3">
          <a href="${element.link}"><img src="${element.img}" alt="" width="30%"></a>
         </div>
         
-        `;
+        `; 
 
         $("#socm").append(layout);
     });
@@ -176,23 +179,19 @@ function loadSome(data) {
 }
 
 function liveProject(data) {
-    //livepr
-    var element = ``;
-    data.forEach(element => {
-        element = `
-        <div class="card mt-3">
-        <h5 class="card-header"> <img width="50px" alt="images" src="${element.img}"> ${element.name}</h5>
+    data.forEach(item => { 
+        const projectHtml = `
+        <div class="card mt-3 interactive-card">
+        <h5 class="card-header"> <img width="50px" alt="images" src="${item.img}"> ${item.name}</h5>
         <div class="card-body">
            
-            <p>${element.description}</p>
-         <a class=" btn btn-primary" href="${element.url}">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            <p>${item.description}</p>
+         <a class=" btn btn-primary" href="${item.url}">Explore <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         </div>
-        `;
-        $("#livepr").append(element);
+        `; 
+        $("#livepr").append(projectHtml);
     });
-
 }
 
 // Example usage:
-
