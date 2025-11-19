@@ -1,236 +1,233 @@
 {
-    "image_f": [
-        {
-            "id": "bscim",
-            "loc": "img/proimage.png"
-        },
-        {
-            "id": "hndimg",
-            "loc": "img/myhnd.png"
-        }
-    ],
-    "about_me": "I'm Madushan Joel, a passionate and dedicated software engineer with a deep love for solving complex problems through technology. I have a strong foundation in software engineering, with a BTEC HND and a BSc Honours in Computer Science, both of which I completed with first-class honors. My journey has been defined by continuous learning, curiosity, and the drive to stay on top of the latest trends in the tech industry. Currently, I’m working at People’s Leasing and Finance Sri Lanka, utilizing Java Spring Boot and other cutting-edge technologies to deliver innovative solutions. I enjoy taking on new challenges, whether it’s building apps, contributing to open-source projects. My ultimate goal is to make an impact through the projects I create and the knowledge I share, always aiming for growth and excellence.",
-    "expriance": [
-        {
-            "companynme": "People's Leaseing and finance",
-            "startDate": "2023-01",
-            "enddate": "Present",
-            "role": "Senior Software Developer",
-            "des": "I started my career as a software developer(2023) & promoted as an Senior Software Developer  specialize in developing Restful APIs , Web application using Java's Spring Boot framework for both mobile and web applications. Additionally, I am responsible for maintaining and debugging the backend code for mobile app variants of the core system. This includes ensuring smooth performance and addressing any issues that may arise."
-        },
-        {
-            "companynme": "MobiOS",
-            "startDate": "2019-06",
-            "enddate": "2019-10",
-            "role": "Intern Software Developer",
-            "des": ""
-        }
-    ],
-    "projects": [
-        {
-            "name": "PLC Lead Management System",
-            "start_date": "Nov 2024",
-            "end_date": "Present",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "The Lead Management System (LMS) is a dynamic platform designed to streamline lead generation, tracking, and conversion across multiple branches. It enables campaigns at branch, regional, and national levels, allowing seamless collaboration between marketing teams. Leads are sourced from various channels, including digital platforms, promotions, call centers, car sales, walk-ins, and telephone inquiries, and are directed to a centralized branch interface for efficient processing."
-        },
-        {
-            "name": "PLC Touch App",
-            "start_date": "August 2023",
-            "end_date": "Present",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Developing and maintaining PLC Touch App's REST service backend using Spring Boot. About PLC Touch App: https://www.plc.lk/plc-touch/"
-        },
-        {
-            "name": "PLC CAAP Mobile Application",
-            "start_date": "January 2023",
-            "end_date": "Present",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Developing and maintaining the Spring Boot backend of the application."
-        },
-        {
-            "name": "PLC CAPP App",
-            "description": "CAPP will help to provide credit facilities with an online approval via a seamless process, improving customer turnaround times."
-        },
-        {
-            "name": "LEMS and PLC Transaction REST Service",
-            "start_date": "September 2024",
-            "end_date": "October 2024",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Enables Eco Three Wheeler Savings Account holders to use any battery swap station by inserting the battery and entering their unique ID. The battery station requests PLC to confirm the account balance."
-        },
-        {
-            "name": "Transaction Classification Model",
-            "start_date": "September 2024",
-            "end_date": "September 2024",
-            "associated_with": "Individual project",
-            "description": "A machine learning model designed to categorize financial transactions based on text descriptions into predefined categories (e.g., 'Debit' or 'Credit'). Utilizes text data from transaction descriptions to predict transaction types."
-        },
-        {
-            "name": "People's Travel Insurance",
-            "start_date": "August 2024",
-            "end_date": "August 2024",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Converted a static product to dynamic using a Java servlet project."
-        },
-        {
-            "name": "FireInsurance API Service for People's Bank",
-            "start_date": "May 2024",
-            "end_date": "May 2024",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Developed a RESTful service for People's Bank to retrieve client information and generate policy issue numbers for People's Insurance."
-        },
-        {
-            "name": "Fixed Assets Management System",
-            "start_date": "November 2023",
-            "end_date": "May 2024",
-            "associated_with": "Kingston University",
-            "description": "Developed as an Individual Final Project to streamline asset tracking and procurement efficiency. Features include price comparison, QR scanning integration via Flutter, and a MySQL database with JPA mapping. Built with Spring Boot MVC architecture for optimal performance, scalability, and maintainability."
-        },
-        {
-            "name": "Board Writer",
-            "start_date": "December 2023",
-            "end_date": "February 2024",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Developed an application using Spring Boot to efficiently generate and manage board paper numbers/tokens, ensuring timely access and accountability."
-        },
-        {
-            "name": "Save Wild Web & Mobile App",
-            "start_date": "November 2023",
-            "end_date": "December 2023",
-            "associated_with": "Kingston University",
-            "description": "Led the development of a Wildlife Crimes Reporting Application comprising a web platform with an admin panel and a public portal, along with a mobile application. Utilized Spring Boot for the web interface and Flutter for mobile compatibility, enabling real-time incident tracking and cross-platform accessibility."
-        },
-        {
-            "name": "People's Leasing and Finance Core System",
-            "start_date": "January 2023",
-            "end_date": "October 2023",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Developed and maintained various components including CRIB credit score, CRIB view on client applications, fixed assets, and inventory management."
-        },
-        {
-            "name": "E Revenue Licence Automation for People's Insurance",
-            "start_date": "July 2023",
-            "end_date": "August 2023",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Automated the saving and updating of existing vehicle e-Revenue licenses every 5 minutes using Spring Boot and Progress 4GL. Tasks included integrating ERL API (access token management, error handling), proxy server configuration, and scheduler configurations to fetch and update data from the database."
-        },
-        {
-            "name": "CRIB API Integration",
-            "start_date": "February 2023",
-            "end_date": "February 2023",
-            "associated_with": "People's Leasing & Finance PLC",
-            "description": "Built an intermediary layer to interact with the CRIB third-party API and expose a custom REST API. This integration included automated token handling, proxy server merging, and error handling. Utilized in both the CAPP app and PLC Core System."
-        },
-        {
-            "name": "Student Management System",
-            "start_date": "October 2022",
-            "end_date": "November 2022",
-            "associated_with": "Individual project",
-            "description": "Individual project: Developed a web-based Student Management System using Java Web Servlet, JSP, and MySQL JDBC."
-        },
-        {
-            "name": "Metal Detector Android App",
-            "start_date": "June 2022",
-            "end_date": "July 2022",
-            "associated_with": "Individual project",
-            "description": "Developed an Android app using the device's built-in magnetometer to detect ferrous metals and visualize the magnetic field.",
-            "github": "https://github.com/madushanjoel98/Metal_detector-android-app"
-        },
-        {
-            "name": "Hospital Management System",
-            "start_date": "April 2021",
-            "end_date": "May 2021",
-            "associated_with": "Pearson College London",
-            "description": "Developed a Hospital Management System using PHP and MySQL for ESOFT's Pearson BTECH HND program."
-        },
-        {
-            "name": "URL Shortening Service",
-            "start_date": "June 2019",
-            "end_date": "July 2019",
-            "associated_with": "MobiOS",
-            "description": "Created a URL Shortening Service using the Spring Boot framework and MySQL JDBC."
-        }
-    ],
-    "skills": [
-        "Java",
-        "MySQL",
-        "Springboot",
-        "Python",
-          "React",
-        "Flask",
-        "OpenEdge",
-        "JavaScript",
-        "TypeScript",
-        "HTML|CSS",
-        "Bootstrap",
-        "C#",
-        "GIT",
-        "SVN",
-        "Flutter",
-        "Android",
-        "Jsp",
-        "JPA",
-        "ML",
-        "PHP",
-        "Ads Management",
-        "Software architecturing"
-    ],
-    "contact": [
-        {
-            "channel": "email",
-            "icon": "img/email_3694396.png",
-            "data": "madushanjoel@gmail.com"
-        },
-        {
-            "channel": "Instagram",
-            "icon": "img/insta_icon.png",
-            "data": "madushanjoel@gmail.com"
-        }
-    ],
-    "socialme": [
-        {
-            "name": "github",
-            "link": "https://github.com/madushanjoel98",
-            "img": "img/github.png"
-        },
-        {
-            "name": "LinkedIn",
-            "link": "https://lk.linkedin.com/in/madushan-joel-47b790104",
-            "img": "img/linkl.png"
-        },
-        {
-            "name": "Fiverr",
-            "link": "https://www.fiverr.com/s/kLwXElA",
-            "img": "img/1706198411fiverr-icon-png.png"
-        },
-        {
-            "name": "instagram",
-            "link": "https://www.instagram.com/mj_boy98/p/C_vp6yYovvp/",
-            "img": "img/instagram.png"
-        }
-    ],
-    "onlive": [
-        {
-            "name": "Bramuda Transaction Classification",
-            "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
-            "img": "img/brmptcx.png",
-            "url": "https://alphasl.pythonanywhere.com/"
-        },
-        {
-            "name": "ToolSpark",
-            "description": "Explore ToolSpark versatile online tools, including a WhatsApp Chat Viewer for exported chats, Base64 encoder/decoder,QR genrator Morse code translator, and more. Fast, secure, and user-friendly utilities for your daily needs",
-            "img": "img/toolspark.png",
-            "url": "https://madushanjoel98.github.io/utils/"
-        }
-
-,
-{
-            "name": "Ottasker",
-            "description": "Ottasker Flask Template is a well-structured, open-source Flask boilerplate designed to streamline and accelerate web application development with a focus on clean architecture and maintainability. It provides an organized project structure, seamless blueprint management, and clearly defined request and response models to standardize API behavior. Application configurations are easily managed through intuitive JSON files, allowing for efficient customization. Ottasker comes equipped with built-in support for JWT-based authentication, CORS settings, and robust logging management, making it ideal for both small-scale projects and scalable systems. Whether you're prototyping or building a production-grade app, Ottasker offers a reliable foundation for developing clean and modular Flask applications.",
-"img": "https://raw.githubusercontent.com/madushanjoel98/flask_template/refs/heads/main/static/img/otterimage2copy.png",
-            "url": "https://madushanjoel98.github.io/OttaskerWebPage/"
-        }
-
-    ]
+  "image_f": [
+    {
+      "id": "bscim",
+      "loc": "img/proimage.png"
+    },
+    {
+      "id": "hndimg",
+      "loc": "img/myhnd.png"
+    }
+  ],
+  "about_me": "I'm Madushan Joel, a passionate and dedicated software engineer with a deep love for solving complex problems through technology. I studied at Wesley College 2004, where I built the foundation for my academic and personal growth. I have a strong background in software engineering, with a BTEC HND and a BSc Honours in Computer Science at Kingston university. My journey has been defined by continuous learning, curiosity, and the drive to stay on top of the latest trends in the tech industry. Currently, I’m working at People’s Leasing and Finance Sri Lanka, utilizing Java Spring Boot and other cutting-edge technologies to deliver innovative solutions. I enjoy taking on new challenges, whether it’s building apps or contributing to open-source projects. My ultimate goal is to make an impact through the projects I create and the knowledge I share, always aiming for growth and excellence.",
+  "expriance": [
+    {
+      "companynme": "People's Leaseing and finance",
+      "startDate": "2023-01",
+      "enddate": "Present",
+      "role": "Senior Software Developer",
+      "des": "I started my career as a software developer(2023) & promoted as an Senior Software Developer  specialize in developing Restful APIs , Web application using Java's Spring Boot framework for both mobile and web applications. Additionally, I am responsible for maintaining and debugging the backend code for mobile app variants of the core system. This includes ensuring smooth performance and addressing any issues that may arise."
+    },
+    {
+      "companynme": "MobiOS",
+      "startDate": "2019-06",
+      "enddate": "2019-10",
+      "role": "Intern Software Developer",
+      "des": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "PLC Lead Management System",
+      "start_date": "Nov 2024",
+      "end_date": "Present",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "The Lead Management System (LMS) is a dynamic platform designed to streamline lead generation, tracking, and conversion across multiple branches. It enables campaigns at branch, regional, and national levels, allowing seamless collaboration between marketing teams. Leads are sourced from various channels, including digital platforms, promotions, call centers, car sales, walk-ins, and telephone inquiries, and are directed to a centralized branch interface for efficient processing."
+    },
+    {
+      "name": "PLC Touch App",
+      "start_date": "August 2023",
+      "end_date": "Present",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Developing and maintaining PLC Touch App's REST service backend using Spring Boot. About PLC Touch App: https://www.plc.lk/plc-touch/"
+    },
+    {
+      "name": "PLC CAAP Mobile Application",
+      "start_date": "January 2023",
+      "end_date": "Present",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Developing and maintaining the Spring Boot backend of the application."
+    },
+    {
+      "name": "PLC CAPP App",
+      "description": "CAPP will help to provide credit facilities with an online approval via a seamless process, improving customer turnaround times."
+    },
+    {
+      "name": "LEMS and PLC Transaction REST Service",
+      "start_date": "September 2024",
+      "end_date": "October 2024",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Enables Eco Three Wheeler Savings Account holders to use any battery swap station by inserting the battery and entering their unique ID. The battery station requests PLC to confirm the account balance."
+    },
+    {
+      "name": "Transaction Classification Model",
+      "start_date": "September 2024",
+      "end_date": "September 2024",
+      "associated_with": "Individual project",
+      "description": "A machine learning model designed to categorize financial transactions based on text descriptions into predefined categories (e.g., 'Debit' or 'Credit'). Utilizes text data from transaction descriptions to predict transaction types."
+    },
+    {
+      "name": "People's Travel Insurance",
+      "start_date": "August 2024",
+      "end_date": "August 2024",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Converted a static product to dynamic using a Java servlet project."
+    },
+    {
+      "name": "FireInsurance API Service for People's Bank",
+      "start_date": "May 2024",
+      "end_date": "May 2024",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Developed a RESTful service for People's Bank to retrieve client information and generate policy issue numbers for People's Insurance."
+    },
+    {
+      "name": "Fixed Assets Management System",
+      "start_date": "November 2023",
+      "end_date": "May 2024",
+      "associated_with": "Kingston University",
+      "description": "Developed as an Individual Final Project to streamline asset tracking and procurement efficiency. Features include price comparison, QR scanning integration via Flutter, and a MySQL database with JPA mapping. Built with Spring Boot MVC architecture for optimal performance, scalability, and maintainability."
+    },
+    {
+      "name": "Board Writer",
+      "start_date": "December 2023",
+      "end_date": "February 2024",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Developed an application using Spring Boot to efficiently generate and manage board paper numbers/tokens, ensuring timely access and accountability."
+    },
+    {
+      "name": "Save Wild Web & Mobile App",
+      "start_date": "November 2023",
+      "end_date": "December 2023",
+      "associated_with": "Kingston University",
+      "description": "Led the development of a Wildlife Crimes Reporting Application comprising a web platform with an admin panel and a public portal, along with a mobile application. Utilized Spring Boot for the web interface and Flutter for mobile compatibility, enabling real-time incident tracking and cross-platform accessibility."
+    },
+    {
+      "name": "People's Leasing and Finance Core System",
+      "start_date": "January 2023",
+      "end_date": "October 2023",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Developed and maintained various components including CRIB credit score, CRIB view on client applications, fixed assets, and inventory management."
+    },
+    {
+      "name": "E Revenue Licence Automation for People's Insurance",
+      "start_date": "July 2023",
+      "end_date": "August 2023",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Automated the saving and updating of existing vehicle e-Revenue licenses every 5 minutes using Spring Boot and Progress 4GL. Tasks included integrating ERL API (access token management, error handling), proxy server configuration, and scheduler configurations to fetch and update data from the database."
+    },
+    {
+      "name": "CRIB API Integration",
+      "start_date": "February 2023",
+      "end_date": "February 2023",
+      "associated_with": "People's Leasing & Finance PLC",
+      "description": "Built an intermediary layer to interact with the CRIB third-party API and expose a custom REST API. This integration included automated token handling, proxy server merging, and error handling. Utilized in both the CAPP app and PLC Core System."
+    },
+    {
+      "name": "Student Management System",
+      "start_date": "October 2022",
+      "end_date": "November 2022",
+      "associated_with": "Individual project",
+      "description": "Individual project: Developed a web-based Student Management System using Java Web Servlet, JSP, and MySQL JDBC."
+    },
+    {
+      "name": "Metal Detector Android App",
+      "start_date": "June 2022",
+      "end_date": "July 2022",
+      "associated_with": "Individual project",
+      "description": "Developed an Android app using the device's built-in magnetometer to detect ferrous metals and visualize the magnetic field.",
+      "github": "https://github.com/madushanjoel98/Metal_detector-android-app"
+    },
+    {
+      "name": "Hospital Management System",
+      "start_date": "April 2021",
+      "end_date": "May 2021",
+      "associated_with": "Pearson College London",
+      "description": "Developed a Hospital Management System using PHP and MySQL for ESOFT's Pearson BTECH HND program."
+    },
+    {
+      "name": "URL Shortening Service",
+      "start_date": "June 2019",
+      "end_date": "July 2019",
+      "associated_with": "MobiOS",
+      "description": "Created a URL Shortening Service using the Spring Boot framework and MySQL JDBC."
+    }
+  ],
+  "skills": [
+    "Java",
+    "MySQL",
+    "Springboot",
+    "Python",
+    "React",
+    "Flask",
+    "OpenEdge",
+    "JavaScript",
+    "TypeScript",
+    "HTML|CSS",
+    "Bootstrap",
+    "C#",
+    "GIT",
+    "SVN",
+    "Flutter",
+    "Android",
+    "Jsp",
+    "JPA",
+    "ML",
+    "PHP",
+    "Ads Management",
+    "Software architecturing"
+  ],
+  "contact": [
+    {
+      "channel": "email",
+      "icon": "img/email_3694396.png",
+      "data": "madushanjoel@gmail.com"
+    },
+    {
+      "channel": "Instagram",
+      "icon": "img/insta_icon.png",
+      "data": "madushanjoel@gmail.com"
+    }
+  ],
+  "socialme": [
+    {
+      "name": "github",
+      "link": "https://github.com/madushanjoel98",
+      "img": "img/github.png"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://lk.linkedin.com/in/madushan-joel-47b790104",
+      "img": "img/linkl.png"
+    },
+    {
+      "name": "Fiverr",
+      "link": "https://www.fiverr.com/s/kLwXElA",
+      "img": "img/1706198411fiverr-icon-png.png"
+    },
+    {
+      "name": "instagram",
+      "link": "https://www.instagram.com/mj_boy98/p/C_vp6yYovvp/",
+      "img": "img/instagram.png"
+    }
+  ],
+  "onlive": [
+    {
+      "name": "Bramuda Transaction Classification",
+      "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
+      "img": "img/brmptcx.png",
+      "url": "https://alphasl.pythonanywhere.com/"
+    },
+    {
+      "name": "ToolSpark",
+      "description": "Explore ToolSpark versatile online tools, including a WhatsApp Chat Viewer for exported chats, Base64 encoder/decoder,QR genrator Morse code translator, and more. Fast, secure, and user-friendly utilities for your daily needs",
+      "img": "img/toolspark.png",
+      "url": "https://madushanjoel98.github.io/utils/"
+    },
+    {
+      "name": "Ottasker",
+      "description": "Ottasker Flask Template is a well-structured, open-source Flask boilerplate designed to streamline and accelerate web application development with a focus on clean architecture and maintainability. It provides an organized project structure, seamless blueprint management, and clearly defined request and response models to standardize API behavior. Application configurations are easily managed through intuitive JSON files, allowing for efficient customization. Ottasker comes equipped with built-in support for JWT-based authentication, CORS settings, and robust logging management, making it ideal for both small-scale projects and scalable systems. Whether you're prototyping or building a production-grade app, Ottasker offers a reliable foundation for developing clean and modular Flask applications.",
+      "img": "https://raw.githubusercontent.com/madushanjoel98/flask_template/refs/heads/main/static/img/otterimage2copy.png",
+      "url": "https://madushanjoel98.github.io/OttaskerWebPage/"
+    }
+  ]
 }
