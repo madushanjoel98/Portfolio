@@ -197,7 +197,7 @@ html {
   bottom: -100px;
   left: -100px;
   animation: float 15s infinite ease-in-out reverse;
-  background-image: url(/img/coding_man.png);
+  background-image: url(img/coding_man.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
