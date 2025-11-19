@@ -30,7 +30,7 @@ function loadJson() {
 function loadExpriance(data) {
     //expriance
     data.expriance.forEach(element => {
-        $(".expm").append(renderProject(element.companynme, element.role, element.startDate, element.enddate, element.des));
+        $("#expm").append(renderProject(element.companynme, element.role, element.startDate, element.enddate, element.des));
 
     });
 
@@ -38,16 +38,15 @@ function loadExpriance(data) {
 
 function renderProject(compname, position, start, end, des) {
     let elo = `
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title"><b>${compname}</b></h5>
-          <h6 class="card-subtitle mb-2 text-muted">${position}</h6>
-          <p class="card-text">
-            <small class="text-muted">${start} - ${end}</small><br>
-            ${des}
-          </p>
+
+<div class="timeline-item">
+        <div class="card">
+          <h3 class="card-title">${position}</h3>
+          <p class="card-subtitle">${compname} | ${start} - ${end}</p>
+          <p class="card-text"> ${des}</p>
         </div>
       </div>
+
     `;
     return elo;
 }
@@ -94,7 +93,7 @@ function loadProjects(data) {
 
         var layout = ` <div class="card mb-2">
       <div class="card-body">
-        <b class="card-text text-wrap">${element.name}</b>
+        <b class="card-title">${element.name}</b>
         </br>
          <small class="card-text text-wrap">${element.associated_with}</small>
          </br>
@@ -112,7 +111,7 @@ function loadProjects(data) {
 function skillCapus(data) {
     var darkColor = getRandomDarkColor();
     data.forEach(element => {
-        var cap = `<span class="badge badge-pill skill-badge text-white" style="background-color: ${getRandomDarkColor()};">
+        var cap = `<span class="skill-badge" >
                   ${element}
                   </span>`;
         $("#skiller").append(cap);
