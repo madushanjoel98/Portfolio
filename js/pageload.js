@@ -180,7 +180,7 @@ function liveProject(data) {
     data.forEach(element => {
         element = `
         <div class="card mt-3">
-        <h5 class="card-header"> <img width="50px" alt="images" src="${element.img}"> ${element.name}</h5>
+        <h5 class="card-header"> <img loading="lazy" width="50px" alt="images" src="${element.img}"> ${element.name}</h5>
         <div class="card-body">
            
             <p>${element.description}</p>
