@@ -89,22 +89,37 @@ function loadimages(arrayd) {
 
 function loadProjects(data) {
 
-    data.forEach(element => {
+    data.forEach((element, index) => {
 
-        var layout = ` <div class="card mb-2">
-      <div class="card-body">
-        <b class="card-title">${element.name}</b>
-        </br>
-         <small class="card-text text-wrap">${element.associated_with}</small>
-         </br>
-        <small>${element.start_date} - ${element.end_date} </small>
-        <p class= "text-wrap">${element.description}</p>
-      </div>
-    </div>`;
+        let collapseId = "proj_desc_" + index; // unique collapse ID
+
+        var layout = `
+                <div class="card mb-2">
+                <div class="card-body">
+                    
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <h5 class="card-title mb-0">${element.name}</h5>
+                            <small class="text-muted text-wrap d-block">${element.associated_with}</small>
+                        </div>
+                          <button class="btn text-light"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#${collapseId}">
+                        Show details
+                    </button>
+
+                    </div>
+                    <small class="text-nowrap"> ${element.start_date} - ${element.end_date}</small>
+                    <div id="${collapseId}" class="collapse mt-2 pt-2 border-top">
+                        <p class="text-wrap mb-0">${element.description}</p>
+                    </div>
+
+                </div>
+            </div>
+        `;
 
         $("#projecter").append(layout);
     });
-
 
 }
 
@@ -177,19 +192,41 @@ function loadSome(data) {
 function liveProject(data) {
     //livepr
     var element = ``;
-    data.forEach(element => {
-        element = `
-        <div class="card mt-3">
-        <h5 class="card-header"> <img loading="lazy" width="50px" alt="images" src="${element.img}"> ${element.name}</h5>
-        <div class="card-body">
-           
-            <p>${element.description}</p>
-         <a class=" btn btn-primary" href="${element.url}">Explore <i class="fa-solid fa-arrow-right"></i></a>
+    data.forEach((element, index) => {
+        let collapseId = "livedesc_" + index;  // unique ID
+
+        let item = `
+   <div class="card mt-3">
+    <div class="card-header d-flex align-items-center">
+        <div class="d-flex align-items-center flex-grow-1">
+            <img loading="lazy" width="100px" alt="images" src="${element.img}" class="me-3">
+            <h5 class="mb-0 me-auto">
+                ${element.name}
+            </h5>
+            
+            <button class="btn text-primary p-0" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#${collapseId}">
+                Show Details
+            </button>
         </div>
-        </div>
-        `;
-        $("#livepr").append(element);
+    </div>
+    
+    <div id="${collapseId}" class="collapse card-body border-top p-3">
+        <p class="mb-0">${element.description}</p>
+    </div>
+    
+    <div class="card-body pt-0">
+        <a class="btn btn-primary mt-2" href="${element.url}">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+    `;
+
+        $("#livepr").append(item);
     });
+
 
 }
 
