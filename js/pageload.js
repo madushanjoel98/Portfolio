@@ -105,7 +105,7 @@ function loadProjects(data) {
                           <button class="btn text-light"
                         data-bs-toggle="collapse"
                         data-bs-target="#${collapseId}">
-                        Show details
+                                       <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Project information"></i>
                     </button>
 
                     </div>
@@ -207,7 +207,7 @@ function liveProject(data) {
             <button class="btn text-primary p-0" 
                 data-bs-toggle="collapse" 
                 data-bs-target="#${collapseId}">
-                Show Details
+                <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Project information"></i>
             </button>
         </div>
     </div>
