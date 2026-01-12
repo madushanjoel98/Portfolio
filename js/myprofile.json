@@ -211,6 +211,7 @@
     }
   ],
   "onlive": [
+    
     {
       "name": "Bramuda Transaction Classification",
       "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
@@ -222,6 +223,12 @@
       "description": "Explore ToolSpark versatile online tools, including a WhatsApp Chat Viewer for exported chats, Base64 encoder/decoder,QR genrator Morse code translator, and more. Fast, secure, and user-friendly utilities for your daily needs",
       "img": "img/toolspark.png",
       "url": "https://madushanjoel98.github.io/utils/"
+    },
+    {
+      "name": "Free CV maker",
+      "description": "Create your perfect resume in minutes,Generate an ATS-friendly CV in minutes and apply with confidence. No payment. No watermark.",
+      "img": "img/cv_maker.png",
+      "url": "https://madushanjoel98.github.io/cv_maker/"
     },
     {
       "name": "Ottasker",
