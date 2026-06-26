@@ -38,16 +38,13 @@ function loadExpriance(data) {
 
 function renderProject(compname, position, start, end, des) {
     let elo = `
-
 <div class="timeline-item">
-        <div class="card">
-          <h3 class="card-title">${position}</h3>
-          <p class="card-subtitle">${compname} | ${start} - ${end}</p>
-          <p class="card-text"> ${des}</p>
-        </div>
-      </div>
-
-    `;
+  <div class="card">
+    <h3 class="card-title">${position}</h3>
+    <p class="card-subtitle"><i class="fa-solid fa-building" style="margin-right:6px;font-size:0.8rem;"></i>${compname} &nbsp;|&nbsp; <span style="color:var(--secondary);">${start} — ${end}</span></p>
+    <p class="card-text">${des}</p>
+  </div>
+</div>`;
     return elo;
 }
 
@@ -88,50 +85,35 @@ function loadimages(arrayd) {
 }
 
 function loadProjects(data) {
-
     data.forEach((element, index) => {
-
-        let collapseId = "proj_desc_" + index; // unique collapse ID
-
+        let collapseId = "proj_desc_" + index;
         var layout = `
-                <div class="card mb-2">
-                <div class="card-body">
-                    
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <div>
-                            <h5 class="card-title mb-0">${element.name}</h5>
-                            <small class="text-muted text-wrap d-block">${element.associated_with}</small>
-                        </div>
-                          <button class="btn text-light"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#${collapseId}">
-                                       <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Project information"></i>
-                    </button>
-
-                    </div>
-                    <small class="text-nowrap"> ${element.start_date} - ${element.end_date}</small>
-                    <div id="${collapseId}" class="collapse mt-2 pt-2 border-top">
-                        <p class="text-wrap mb-0">${element.description}</p>
-                    </div>
-
-                </div>
-            </div>
-        `;
-
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-start mb-2">
+      <div>
+        <h5 class="card-title mb-1">${element.name}</h5>
+        <small class="text-muted d-block">${element.associated_with}</small>
+      </div>
+      <button class="btn text-light" data-bs-toggle="collapse" data-bs-target="#${collapseId}" title="Project info">
+        <i class="fa-solid fa-circle-info"></i>
+      </button>
+    </div>
+    <small class="text-nowrap"><i class="fa-regular fa-calendar" style="margin-right:4px;"></i>${element.start_date} — ${element.end_date}</small>
+    <div id="${collapseId}" class="collapse mt-2 pt-2 border-top">
+      <p class="text-wrap mb-0">${element.description}</p>
+    </div>
+  </div>
+</div>`;
         $("#projecter").append(layout);
     });
-
 }
 
 function skillCapus(data) {
-    var darkColor = getRandomDarkColor();
     data.forEach(element => {
-        var cap = `<span class="skill-badge" >
-                  ${element}
-                  </span>`;
+        var cap = `<span class="skill-badge">${element}</span>`;
         $("#skiller").append(cap);
     });
-
 }
 
 function getRandomDarkColor() {
@@ -190,44 +172,31 @@ function loadSome(data) {
 }
 
 function liveProject(data) {
-    //livepr
-    var element = ``;
     data.forEach((element, index) => {
-        let collapseId = "livedesc_" + index;  // unique ID
-
+        let collapseId = "livedesc_" + index;
         let item = `
-   <div class="card mt-3">
-    <div class="card-header d-flex align-items-center">
-        <div class="d-flex align-items-center flex-grow-1">
-            <img loading="lazy" width="100px" alt="images" src="${element.img}" class="me-3">
-            <h5 class="mb-0 me-auto">
-                ${element.name}
-            </h5>
-            
-            <button class="btn text-primary p-0" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#${collapseId}">
-                <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Project information"></i>
-            </button>
-        </div>
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img loading="lazy" width="64" height="64" alt="${element.name}" src="${element.img}"
+           style="border-radius:10px;object-fit:contain;background:var(--glass);padding:4px;flex-shrink:0;">
+      <div class="flex-grow-1">
+        <h5 class="card-title mb-0">${element.name}</h5>
+      </div>
+      <button class="btn text-light" data-bs-toggle="collapse" data-bs-target="#${collapseId}" title="Details">
+        <i class="fa-solid fa-circle-info"></i>
+      </button>
     </div>
-    
-    <div id="${collapseId}" class="collapse card-body border-top p-3">
-        <p class="mb-0">${element.description}</p>
+    <div id="${collapseId}" class="collapse mb-3">
+      <p class="card-text">${element.description}</p>
     </div>
-    
-    <div class="card-body pt-0">
-        <a class="btn btn-primary mt-2" href="${element.url}">
-            Explore <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-</div>
-    `;
-
+    <a class="btn btn-primary" href="${element.url}" target="_blank">
+      Explore <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>`;
         $("#livepr").append(item);
     });
-
-
 }
 
 // Example usage:

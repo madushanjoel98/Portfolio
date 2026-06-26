@@ -4,301 +4,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madushan Joel - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <meta name="google-site-verification" content="jouBDpAkU1WHX_vq9R_HBq6UGym2Kkrwr_NYwfzkgB8" />
-  <meta name="description" content="I'm madushan joel">
-  <meta property="og:type" content="Portfolio">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <meta property="og:title" content="Madushan joel's Portfolio">
-  <meta name="keywords"
-    content="madushan joel,Software developer,PLC,people's leasing and finance, people's leasing and finance Software engineer,mj,Madushan Joel Portfolio, joel,Wesley College,OBU">
+  <title>Madushan Joel — Senior Software Developer</title>
+  <meta name="description" content="Madushan Joel is a Senior Software Developer specializing in full-stack engineering, cloud systems, and enterprise solutions.">
+  <meta name="keywords" content="Madushan Joel, Software Developer, Software Engineer, Full Stack, PLC, People's Leasing, Portfolio, Kingston University">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madushanjoel.dev/">
+  <meta property="og:title" content="Madushan Joel — Senior Software Developer">
+  <meta property="og:description" content="Portfolio of Madushan Joel, Senior Software Developer.">
+  <meta name="google-site-verification" content="jouBDpAkU1WHX_vq9R_HBq6UGym2Kkrwr_NYwfzkgB8">
 
-  <!-- Animate.css for animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <script src="js/pageload.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark " id="navbar">
-    <a class="navbar-brand logo" href="#">MJ</a>
 
-    <!-- Toggle button (Bootstrap 5 syntax) -->
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class=" navbar-toggler-icon"></span>
-    </button>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Collapsible Content -->
-    <div class="collapse navbar-collapse nav-container" id="navbarNav">
-      <ul class="navbar-nav ms-auto nav-links">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-        <li class="nav-item"><a class="nav-link" href="#onlive">On-live</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+  <!-- Particle canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ─── NAVBAR ─────────────────────────────── -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="nav-container w-100">
+      <a class="navbar-brand logo" href="#">MJ</a>
+
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav-links">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#onlive">On-live</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- ─── HERO ──────────────────────────────── -->
+  <section class="hero" id="home">
+    <!-- Ambient orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
     <div class="hero-content">
-      <h1 class="hero-title">Madushan Joel</h1>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for new opportunities
+      </div>
+
+      <h1 class="hero-title">
+        <span class="name-gradient">Madushan Joel</span>
+      </h1>
       <p class="hero-subtitle">Senior Software Developer</p>
+      <p class="hero-tagline">
+        Building elegant, high-performance software solutions that bridge technology and business impact.
+      </p>
+
       <div class="hero-cta">
-        <a href="#onlive" class="btn btn-primary">Live Projects</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <a href="#onlive" class="btn btn-primary" id="btn-live-projects">
+          <i class="fa-solid fa-rocket"></i>Live Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary" id="btn-get-in-touch">
+          <i class="fa-regular fa-envelope"></i>Get in Touch
+        </a>
       </div>
     </div>
+
     <div class="scroll-indicator">
+      <span>Scroll</span>
       <div class="scroll-arrow"></div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ─── ABOUT ────────────────────────────── -->
   <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title">About <span class="title-accent">Me</span></h2>
     <div class="about-grid">
-      <div class="about-text" id="abut_text">
-      </div>
-      <div class="about-image">
-        <img loading="lazy" src="img/proimage.jpeg" alt="Developer illustration">
+      <div class="about-text reveal-left" id="abut_text"></div>
+      <div class="about-image reveal">
+        <div class="about-image-wrapper">
+          <img loading="lazy" src="img/proimage.jpeg" alt="Madushan Joel — Software Developer">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Social Links -->
-  <div class="social-links">
-    <a href="https://github.com/madushanjoel98" class="social-link" target="_blank">
+  <!-- ─── SOCIAL LINKS ─────────────────────── -->
+  <div class="social-links stagger reveal">
+    <a href="https://github.com/madushanjoel98" class="social-link" target="_blank" aria-label="GitHub" id="link-github">
       <img src="img/github.png" alt="GitHub">
     </a>
-    <a href="https://lk.linkedin.com/in/madushan-joel-47b790104" class="social-link" target="_blank">
+    <a href="https://lk.linkedin.com/in/madushan-joel-47b790104" class="social-link" target="_blank" aria-label="LinkedIn" id="link-linkedin">
       <img src="img/linkl.png" alt="LinkedIn">
     </a>
-
-    <a href="https://www.fiverr.com/s/kLwXElA" class="social-link" target="_blank">
+    <a href="https://www.fiverr.com/s/kLwXElA" class="social-link" target="_blank" aria-label="Fiverr" id="link-fiverr">
       <img src="img/1706198411fiverr-icon-png.png" alt="Fiverr">
     </a>
-    <a href="https://www.instagram.com/mj_boy98/" class="social-link" target="_blank">
+    <a href="https://www.instagram.com/mj_boy98/" class="social-link" target="_blank" aria-label="Instagram" id="link-instagram">
       <img src="img/instagram.png" alt="Instagram">
     </a>
   </div>
 
-  <!-- Skills Section -->
+  <!-- ─── SKILLS ───────────────────────────── -->
   <section id="skills" class="section">
-    <h2 class="section-title">Skills & Technologies</h2>
-    <div class="skills-grid" id="skiller">
-
-    </div>
+    <h2 class="section-title">Skills <span class="title-accent">&amp; Tech</span></h2>
+    <div class="skills-grid stagger" id="skiller"></div>
   </section>
+
+  <!-- ─── EDUCATION ────────────────────────── -->
   <section id="education" class="section">
-    <h2 class="section-title">Education & Acadamic</h2>
+    <h2 class="section-title">Education <span class="title-accent">&amp; Academic</span></h2>
     <div class="timeline" id="edu">
-      <div id="" class="scrolling-container scrolling-gallery"
-        style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
-        <div class="d-inline-block animate__animated animate__fadeIn">
-          <!-- Image 1 -->
-          <div class="card mx-2 d-inline-block" style="width: 300px;">
-            <img id="" loading="lazy" src="img/proimage.png" class="card-img-top" alt="Achievement 1" width="100px">
+      <div class="scrolling-container scrolling-gallery">
+        <div class="d-inline-block">
+          <!-- Card 1 -->
+          <div class="edu-card">
+            <img loading="lazy" src="img/proimage.png" class="card-img-top" alt="BSc Computer Science">
             <div class="card-body">
-              <b class="card-text text-wrap">BSC hons. in computer Science</b>
-              <p class="card-text text-wrap">completed his BSc Honours in Computer Science with a specialization in
-                Software Engineering from Kingston University, achieving first-class honors. </p>
+              <b>BSc Hons. in Computer Science</b>
+              <p>First-class honours in Computer Science with Software Engineering specialisation from Kingston University.</p>
             </div>
           </div>
-          <!-- Image 2 -->
-          <div class="card mx-2 d-inline-block" style="width: 300px;">
-            <img loading="lazy" id="hndimg" class="card-img-top" alt="Achievement 2">
+          <!-- Card 2 -->
+          <div class="edu-card">
+            <img loading="lazy" id="hndimg" class="card-img-top" alt="BTEC HND Software Engineering">
             <div class="card-body">
-              <b class="card-text text-wrap">BTEC HND in Software Engineering </b>
-              <p class="card-text text-wrap">completed Pearson BTEC HND in Software Engineering achieving Merit. </p>
+              <b>BTEC HND in Software Engineering</b>
+              <p>Pearson BTEC HND in Software Engineering — Merit grade.</p>
             </div>
           </div>
-          <!-- Image 3 -->
-          <div class="card mx-2 d-inline-block" style="width: 300px;">
-            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <!-- Card 3 -->
+          <div class="edu-card">
+            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Diploma in English">
             <div class="card-body">
-              <b class="card-text text-wrap">Diploma in English </b>
-              <p class="card-text text-wrap">completed Pearson Diploma in English Merit. </p>
+              <b>Diploma in English</b>
+              <p>Pearson Diploma in English — Merit grade.</p>
             </div>
           </div>
-          <div class="card mx-2 d-inline-block" style="width: 300px;">
-            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <!-- Card 4 -->
+          <div class="edu-card">
+            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Android Development">
             <div class="card-body">
-              <b class="card-text text-wrap">Certificate in Android app Development </b>
-              <p class="card-text text-wrap">completed Pearson Certificate in Android app Development with java. </p>
+              <b>Certificate in Android App Development</b>
+              <p>Pearson Certificate in Android App Development with Java.</p>
             </div>
           </div>
-          <div class="card mx-2 d-inline-block" style="width: 300px;">
-            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Achievement 3">
+          <!-- Card 5 -->
+          <div class="edu-card">
+            <img width="250px" loading="lazy" src="img/pearsons.png" class="card-img-top" alt="Diploma Software Engineering">
             <div class="card-body">
-              <b class="card-text text-wrap">Diploma in Software Engineering </b>
-              <p class="card-text text-wrap">completed Pearson Software Engineering. </p>
+              <b>Diploma in Software Engineering</b>
+              <p>Pearson Diploma in Software Engineering.</p>
             </div>
           </div>
-          <!-- Add more images similarly -->
         </div>
       </div>
-
     </div>
   </section>
-  <!-- Experience Section -->
+
+  <!-- ─── EXPERIENCE ───────────────────────── -->
   <section id="experience" class="section">
-    <h2 class="section-title">Work Experience</h2>
-    <div class="timeline" id="expm">
-
-
-    </div>
+    <h2 class="section-title">Work <span class="title-accent">Experience</span></h2>
+    <div class="timeline" id="expm"></div>
   </section>
+
+  <!-- ─── CERTIFICATIONS ───────────────────── -->
   <section id="certifications" class="container my-5">
-    <h2 class="text-center">Licenses & certifications</h2>
+    <h2>Licenses <span style="background:linear-gradient(135deg,#6366f1,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">&amp; Certifications</span></h2>
 
-    <!-- Horizontal Scrolling Container -->
-    <div id="" class="scrolling-container scrolling-gallery"
-      style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
-      <div class="d-inline-block animate__animated animate__fadeIn">
-        <!--  -->
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8d6a0b89-986c-428a-8e46-0702b9a2ea01"
-          data-share-badge-host="https://www.credly.com"></div>
-
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="e425bfde-bbdb-4a65-90f5-8c5c714d5db6"
-          data-share-badge-host="https://www.credly.com"></div>
-        <!-- Image 1 -->
-        <div class="card-text text-wrap" data-iframe-width="290" data-iframe-height="290"
-          data-share-badge-id="4933e240-6339-467f-b7e8-f80e35fdf55d" data-share-badge-host="https://www.credly.com">
-        </div>
-
-        <!-- Image 2 -->
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="e4d6e789-ccd9-4271-abed-6e7b5fde80f6"
-          data-share-badge-host="https://www.credly.com"></div>
-
-        <!-- Image 3 -->
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="834d6147-bd05-4ef6-980b-587be08b0181"
-          data-share-badge-host="https://www.credly.com"></div>
-
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="689c63b6-f25c-46be-8909-650333d72877"
-          data-share-badge-host="https://www.credly.com"></div>
-
-        <!--  -->
-        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8dba84cd-e52b-414b-a79e-788994d3ea1c"
-          data-share-badge-host="https://www.credly.com"></div>
-
+    <div class="scrolling-container scrolling-gallery">
+      <div class="d-inline-block">
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8d6a0b89-986c-428a-8e46-0702b9a2ea01" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="e425bfde-bbdb-4a65-90f5-8c5c714d5db6" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="4933e240-6339-467f-b7e8-f80e35fdf55d" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="e4d6e789-ccd9-4271-abed-6e7b5fde80f6" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="834d6147-bd05-4ef6-980b-587be08b0181" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="689c63b6-f25c-46be-8909-650333d72877" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="290" data-iframe-height="290" data-share-badge-id="8dba84cd-e52b-414b-a79e-788994d3ea1c" data-share-badge-host="https://www.credly.com"></div>
       </div>
     </div>
   </section>
+
+  <!-- ─── ON-LIVE ───────────────────────────── -->
   <section id="onlive" class="section">
-
-    <h2 class="section-title">On-live</h2>
-    <div class="projects-row" id="livepr" aria-label="Featured projects, horizontally scrollable">
-    </div>
+    <h2 class="section-title">On-<span class="title-accent">Live</span></h2>
+    <div class="projects-row" id="livepr" aria-label="Live projects, vertically scrollable"></div>
   </section>
-  <!-- Projects Section -->
+
+  <!-- ─── PROJECTS ─────────────────────────── -->
   <section id="projects" class="section">
-
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-row" id="projecter" aria-label="Featured projects, horizontally scrollable">
-    </div>
+    <h2 class="section-title">Featured <span class="title-accent">Projects</span></h2>
+    <div class="projects-row" id="projecter" aria-label="Featured projects, vertically scrollable"></div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ─── CONTACT ──────────────────────────── -->
   <section id="contact" class="section">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact">
-      <p style="color: var(--text-muted); margin-bottom: 1rem;">Feel free to reach out for collaborations or just a
-        friendly chat</p>
-      <a href="mailto:madushanjoel@gmail.com" class="contact-email">madushanjoel@gmail.com</a>
-      <br>
-      <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#contactFormModal">
-        Open Contact Form
+    <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+    <div class="contact reveal">
+      <p style="color:var(--text-muted); margin-bottom: 1.5rem; font-size:1.05rem;">
+        Feel free to reach out for collaborations, freelance work, or just a friendly chat.
+      </p>
+      <a href="mailto:madushanjoel@gmail.com" class="contact-email" id="contact-email">
+        madushanjoel@gmail.com
+      </a>
+      <br><br>
+      <button type="button" class="btn btn-primary mt-2" id="btn-open-contact-form"
+              data-bs-toggle="modal" data-bs-target="#contactFormModal">
+        <i class="fa-solid fa-paper-plane"></i> Open Contact Form
       </button>
     </div>
-
   </section>
 
-  <!-- Contact Form Modal -->
-  <div class="modal fade " id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered " style="max-width: 95%;">
-      <div class="modal-content bg-dark">
+  <!-- ─── CONTACT MODAL ─────────────────────── -->
+  <div class="modal fade" id="contactFormModal" tabindex="-1"
+       aria-labelledby="contactFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width:95%;">
+      <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="contactFormModalLabel">Contact Form</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="min-height: 640px;">
-              <div class="text-light">Unable to open? <a href="https://forms.gle/76KmMgzTiksJm9bt7"> Click here to open form!</a></div>
+        <div class="modal-body" style="min-height:640px; background:var(--bg-3);">
+          <div class="text-light mb-2" style="font-size:0.85rem; opacity:0.6;">
+            Unable to open? <a href="https://forms.gle/76KmMgzTiksJm9bt7" style="color:var(--primary);">Click here to open the form!</a>
+          </div>
           <div class="ratio ratio-16x9">
-        
             <iframe class="responsive-iframe"
               src="https://docs.google.com/forms/d/e/1FAIpQLSdtAUV8cw1IQzsXqrfRjPAWRLWspU-I5MZINdhPIOaw9uFP2g/viewform?embedded=true"
-              loading="lazy">
+              loading="lazy" style="border:none; border-radius:12px;">
               Loading…
             </iframe>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    // Lazy-load iframe when modal opens and unload when closed (optional)
-    (function () {
-      var iframe = document.getElementById('contactFormIframe');
-      var modalEl = document.getElementById('contactFormModal');
-
-      modalEl.addEventListener('show.bs.modal', function () {
-        if (!iframe.src) {
-          iframe.src = iframe.dataset.src;
-        }
-      });
-
-      // Optional: clear src on hide to free resources / reset form
-      modalEl.addEventListener('hidden.bs.modal', function () {
-        iframe.src = '';
-      });
-    })();
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Smooth reveal on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    });
-
-    document.querySelectorAll('.card, .timeline-item').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'all 0.6s ease';
-      observer.observe(el);
-    });
-  </script>
-
+  <!-- ─── SCRIPTS ──────────────────────────── -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  <script src="js/pageload.js"></script>
+
+  <script>
+    /* ── Cursor glow ─────────────────────────── */
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    });
+
+    /* ── Navbar scroll effect ────────────────── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── Scroll reveal ───────────────────────── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObserver.observe(el));
+
+    /* Also reveal cards / timeline items dynamically */
+    function observeNewEls() {
+      document.querySelectorAll('.card, .timeline-item, .skill-badge').forEach(el => {
+        if (!el.classList.contains('_observed')) {
+          el.classList.add('reveal', '_observed');
+          revealObserver.observe(el);
+        }
+      });
+    }
+    const domObserver = new MutationObserver(observeNewEls);
+    domObserver.observe(document.body, { childList: true, subtree: true });
+
+    /* ── Particle canvas ─────────────────────── */
+    (function () {
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [], W, H;
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const COLORS = ['rgba(99,102,241,', 'rgba(6,182,212,', 'rgba(167,139,250,'];
+
+      function mkParticle() {
+        const col = COLORS[Math.floor(Math.random() * COLORS.length)];
+        return {
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.4 + 0.3,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.5 + 0.15,
+          col,
+        };
+      }
+
+      for (let i = 0; i < 90; i++) particles.push(mkParticle());
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0) p.x = W;
+          if (p.x > W) p.x = 0;
+          if (p.y < 0) p.y = H;
+          if (p.y > H) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.col + p.alpha + ')';
+          ctx.fill();
+        });
+
+        // Draw subtle connection lines
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 110) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(99,102,241,${0.06 * (1 - dist / 110)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+  </script>
 </body>
 
 </html>
