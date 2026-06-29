@@ -726,6 +726,28 @@ body {
   background: var(--card-bg);
 }
 
+.sub-timeline {
+  position: relative;
+  border-left: 1px solid var(--glass-border) !important;
+}
+
+.sub-timeline-item {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.sub-timeline-dot {
+  position: absolute;
+  left: -1.25rem;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 8px var(--secondary);
+}
+
 .card-title {
   font-family: 'Outfit', sans-serif;
   font-size: 1.15rem;
@@ -966,10 +988,27 @@ body {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(13, 16, 23, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-top: 0.75rem;
+    box-shadow: var(--shadow-lg);
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1.2rem !important;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar { padding: 1rem 1.2rem; }
   .navbar.scrolled { padding: 0.6rem 1.2rem; }
-  .nav-links { gap: 1.2rem; font-size: 0.85rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-image img { width: 260px; }
@@ -978,10 +1017,81 @@ body {
   .hero-cta .btn { width: 100%; max-width: 280px; justify-content: center; }
 
   .section { padding: 4rem 1.2rem; }
+  .section-title { margin-bottom: 2.5rem; }
   .contact { padding: 2.5rem 1.5rem; }
+
+  /* Smooth natural flow layout for projects on mobile */
+  .projects-row {
+    max-height: none !important;
+    overflow-y: visible !important;
+    scroll-snap-type: none !important;
+  }
+
+  /* Smooth snapping for horizontal scroll sections */
+  .scrolling-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .edu-card {
+    scroll-snap-align: start;
+  }
+
+  /* Contact modal mobile layout optimizations */
+  #contactFormModal .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+  #contactFormModal .modal-body {
+    min-height: 70vh !important;
+    padding: 1rem !important;
+    display: flex;
+    flex-direction: column;
+  }
+  #contactFormModal .ratio {
+    flex-grow: 1;
+    --bs-aspect-ratio: unset !important;
+    height: 100% !important;
+  }
+  #contactFormModal .responsive-iframe {
+    position: relative !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 480px) {
   .projects-row .card { min-width: unset; }
   .hero-title { letter-spacing: -1px; }
+
+  /* Timeline spacing optimization */
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  .timeline::before {
+    left: 4px;
+  }
+  .timeline-item::before {
+    left: -1.35rem;
+    width: 10px;
+    height: 10px;
+    top: 1.2rem;
+  }
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+  .timeline-item .card {
+    padding: 1.2rem;
+  }
+
+  /* Sub-timeline positioning */
+  .sub-timeline {
+    margin-left: 0px !important;
+    padding-left: 0.75rem !important;
+  }
+  .sub-timeline-dot {
+    left: -0.9rem;
+    width: 6px;
+    height: 6px;
+  }
 }

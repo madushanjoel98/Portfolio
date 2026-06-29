@@ -2,92 +2,111 @@ let images = null;
 var jsonloc = 'js/myprofile.json';
 
 $(document).ready(function () {
-    loadJson();
-    loadAnimatiom();
+  loadJson();
+  loadAnimatiom();
 
 
 });
 
 function loadJson() {
 
-    $.getJSON(jsonloc, function (data) {
-        // Display the data
-        images = data.image_f;
-        console.log(images);
-        $('#containscv').attr('content', data.about_me);
-        $("#abut_text").html(data.about_me);
-        loadExpriance(data);
-        loadimages(data.image_f);
-        loadProjects(data.projects);
-        skillCapus(data.skills);
-        loadContactME(data.contact);
-        loadSome(data.socialme);
-        liveProject(data.onlive);
-    });
+  $.getJSON(jsonloc, function (data) {
+    // Display the data
+    images = data.image_f;
+    console.log(images);
+    $('#containscv').attr('content', data.about_me);
+    $("#abut_text").html(data.about_me);
+    loadExpriance(data);
+    loadimages(data.image_f);
+    loadProjects(data.projects);
+    skillCapus(data.skills);
+    loadContactME(data.contact);
+    loadSome(data.socialme);
+    liveProject(data.onlive);
+  });
 
 }
 
 function loadExpriance(data) {
-    //expriance
-    data.expriance.forEach(element => {
-        $("#expm").append(renderProject(element.companynme, element.role, element.startDate, element.enddate, element.des));
+  //expriance
+  data.expriance.forEach(element => {
+    $("#expm").append(renderProject(element.companynme, element.role, element.startDate, element.enddate, element.des, element.promotions));
 
-    });
+  });
 
 }
 
-function renderProject(compname, position, start, end, des) {
-    let elo = `
+function renderProject(compname, position, start, end, des, promotions) {
+  let promotionsHtml = '';
+  if (promotions && promotions.length > 0) {
+    promotionsHtml = `
+    <div class="promotions-timeline mt-3 pt-3 border-top border-secondary-subtle">
+      <h4 class="h6 text-primary mb-3"><i class="fa-solid fa-arrow-trend-up me-2 text-primary"></i>Promotion History</h4>
+      <div class="sub-timeline ps-3" style="margin-left: 8px;">
+        ${promotions.map(p => `
+        <div class="sub-timeline-item mb-3 position-relative">
+          <div class="sub-timeline-dot"></div>
+          <h5 class="h6 text-light mb-1" style="font-weight:600;">${p.role}</h5>
+          <div class="text-secondary small mb-1"><i class="fa-regular fa-calendar me-1"></i>${p.startDate} — ${p.enddate}</div>
+          <p class="card-text small mb-0">${p.des}</p>
+        </div>
+        `).join('')}
+      </div>
+    </div>`;
+  }
+
+  let elo = `
 <div class="timeline-item">
   <div class="card">
     <h3 class="card-title">${position}</h3>
     <p class="card-subtitle"><i class="fa-solid fa-building" style="margin-right:6px;font-size:0.8rem;"></i>${compname} &nbsp;|&nbsp; <span style="color:var(--secondary);">${start} — ${end}</span></p>
     <p class="card-text">${des}</p>
+    ${promotionsHtml}
   </div>
 </div>`;
-    return elo;
+  return elo;
 }
 
 function loadAnimatiom() {
 
-    const scrollingContainers = document.getElementsByClassName('scrolling-gallery');
+  const scrollingContainers = document.getElementsByClassName('scrolling-gallery');
 
-    // Auto-scroll function (horizontal)
-    function autoScroll(container) {
-        container.scrollBy(1, 0); // Scroll 1 pixel to the right
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-            container.scrollLeft = 0; // If end is reached, go back to the start
-        }
+  // Auto-scroll function (horizontal)
+  function autoScroll(container) {
+    container.scrollBy(1, 0); // Scroll 1 pixel to the right
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      container.scrollLeft = 0; // If end is reached, go back to the start
     }
+  }
 
-    // Set up auto-scrolling for each container
-    Array.from(scrollingContainers).forEach(container => {
-        let scrollInterval = setInterval(() => autoScroll(container), 50); // Speed of auto-scroll (50ms = slower scroll)
+  // Set up auto-scrolling for each container
+  Array.from(scrollingContainers).forEach(container => {
+    let scrollInterval = setInterval(() => autoScroll(container), 50); // Speed of auto-scroll (50ms = slower scroll)
 
-        // Pause auto-scrolling when mouse enters the container, and restart when mouse leaves
-        container.addEventListener('mouseenter', () => {
-            clearInterval(scrollInterval);
-        });
-
-        container.addEventListener('mouseleave', () => {
-            scrollInterval = setInterval(() => autoScroll(container), 50);
-        });
+    // Pause auto-scrolling when mouse enters the container, and restart when mouse leaves
+    container.addEventListener('mouseenter', () => {
+      clearInterval(scrollInterval);
     });
+
+    container.addEventListener('mouseleave', () => {
+      scrollInterval = setInterval(() => autoScroll(container), 50);
+    });
+  });
 }
 
 function loadimages(arrayd) {
-    arrayd.forEach(element => {
-        $(`#${element.id}`).attr('src', element.loc);
-    });
+  arrayd.forEach(element => {
+    $(`#${element.id}`).attr('src', element.loc);
+  });
 
 
 
 }
 
 function loadProjects(data) {
-    data.forEach((element, index) => {
-        let collapseId = "proj_desc_" + index;
-        var layout = `
+  data.forEach((element, index) => {
+    let collapseId = "proj_desc_" + index;
+    var layout = `
 <div class="card">
   <div class="card-body">
     <div class="d-flex justify-content-between align-items-start mb-2">
@@ -105,76 +124,76 @@ function loadProjects(data) {
     </div>
   </div>
 </div>`;
-        $("#projecter").append(layout);
-    });
+    $("#projecter").append(layout);
+  });
 }
 
 function skillCapus(data) {
-    data.forEach(element => {
-        var cap = `<span class="skill-badge">${element}</span>`;
-        $("#skiller").append(cap);
-    });
+  data.forEach(element => {
+    var cap = `<span class="skill-badge">${element}</span>`;
+    $("#skiller").append(cap);
+  });
 }
 
 function getRandomDarkColor() {
-    // Function to generate random integer between 0 and 255
-    function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+  // Function to generate random integer between 0 and 255
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-    // Convert RGB values to hex
-    function rgbToHex(r, g, b) {
-        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
-    }
+  // Convert RGB values to hex
+  function rgbToHex(r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+  }
 
-    // Function to calculate luminance
-    function calculateLuminance(r, g, b) {
-        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    }
+  // Function to calculate luminance
+  function calculateLuminance(r, g, b) {
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
 
-    let r, g, b, luminance;
+  let r, g, b, luminance;
 
-    // Loop until we get a color with a luminance value low enough for white text
-    do {
-        r = randomInt(0, 255);
-        g = randomInt(0, 255);
-        b = randomInt(0, 255);
-        luminance = calculateLuminance(r, g, b);
-    } while (luminance > 180); // Adjust threshold to control the darkness (lower = darker)
+  // Loop until we get a color with a luminance value low enough for white text
+  do {
+    r = randomInt(0, 255);
+    g = randomInt(0, 255);
+    b = randomInt(0, 255);
+    luminance = calculateLuminance(r, g, b);
+  } while (luminance > 180); // Adjust threshold to control the darkness (lower = darker)
 
-    // Return the random dark color in hex format
-    return rgbToHex(r, g, b);
+  // Return the random dark color in hex format
+  return rgbToHex(r, g, b);
 }
 function loadContactME(data) {
-    data.forEach(element => {
-        var layout = ` <div>
+  data.forEach(element => {
+    var layout = ` <div>
   <a href="${element.data}"><img src="${element.icon}" alt="" width="60px"></a>
  </div>`;
-        $("#contacwt").append(layout);
-    });
+    $("#contacwt").append(layout);
+  });
 
 }
 
 function loadSome(data) {
-    data.forEach(element => {
+  data.forEach(element => {
 
-        var layout = ` 
+    var layout = ` 
           <div class="col col-lg-3">
          <a href="${element.link}"><img src="${element.img}" alt="" width="30%"></a>
         </div>
         
         `;
 
-        $("#socm").append(layout);
-    });
+    $("#socm").append(layout);
+  });
 
 
 }
 
 function liveProject(data) {
-    data.forEach((element, index) => {
-        let collapseId = "livedesc_" + index;
-        let item = `
+  data.forEach((element, index) => {
+    let collapseId = "livedesc_" + index;
+    let item = `
 <div class="card">
   <div class="card-body">
     <div class="d-flex align-items-center gap-3 mb-3">
@@ -195,8 +214,8 @@ function liveProject(data) {
     </a>
   </div>
 </div>`;
-        $("#livepr").append(item);
-    });
+    $("#livepr").append(item);
+  });
 }
 
 // Example usage:

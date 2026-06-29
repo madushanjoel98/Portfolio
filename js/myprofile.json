@@ -15,8 +15,28 @@
       "companynme": "People's Leaseing and finance",
       "startDate": "2023-01",
       "enddate": "Present",
-      "role": "Senior Software Developer",
-      "des": "I started my career as a software developer(2023) & promoted as an Senior Software Developer  specialize in developing Restful APIs , Web application using Java's Spring Boot framework for both mobile and web applications. Additionally, I am responsible for maintaining and debugging the backend code for mobile app variants of the core system. This includes ensuring smooth performance and addressing any issues that may arise."
+      "role": "Analyst programmer",
+      "des": "I started my career as a software developer(2023) & promoted as an Senior Software Developer  specialize in developing Restful APIs , Web application using Java's Spring Boot framework for both mobile and web applications. Additionally, I am responsible for maintaining and debugging the backend code for mobile app variants of the core system. This includes ensuring smooth performance and addressing any issues that may arise.",
+      "promotions": [
+        {
+          "role": "Analyst programmer",
+          "startDate": "2025-09",
+          "enddate": "Present",
+          "des": "a hybrid role bridging business needs and IT solutions. You analyze user requirements to design, develop, test, and maintain software programs. Acting as a bridge between a company and its IT department, you handle both the system analysis and the hands-on coding"
+        },
+        {
+          "role": "Senior Software Developer",
+          "startDate": "2024-09",
+          "enddate": "Present",
+          "des": "Specialize in developing RESTful APIs and Web applications using Java's Spring Boot framework for both mobile and web applications. Responsible for maintaining and debugging backend code for mobile app variants of the core system."
+        },
+        {
+          "role": "Software Developer",
+          "startDate": "2023-01",
+          "enddate": "2024-06",
+          "des": "Started career developing RESTful APIs and backend services using Spring Boot. Collaborated on enterprise features, client CRIB views, and core systems."
+        }
+      ]
     },
     {
       "companynme": "MobiOS",
@@ -211,7 +231,6 @@
     }
   ],
   "onlive": [
-    
     {
       "name": "Bramuda Transaction Classification",
       "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
