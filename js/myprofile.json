@@ -232,6 +232,12 @@
   ],
   "onlive": [
     {
+      "name": "PowerLog-Workout & Fitness Log",
+      "description": "PowerLog is an offline fitness tracker for workouts, PRs, body stats, hydration, notes, analytics, and backups—all private, with no accounts or cloud. Avilable in  <a href='https://play.google.com/store/apps/details?id=com.madushan.powerlog'>Google Playstore</a>",
+      "img": "img/powerlog.png",
+      "url": "https://alphasl-hub.github.io/powerlog/"
+    },
+    {
       "name": "Bramuda Transaction Classification",
       "description": "Introducing our Transaction Classification Model—a powerful tool that automatically categorizes financial transactions as either Credit or Debit based on their descriptions. Leveraging advanced Natural Language Processing techniques like TF-IDF for feature extraction and Logistic Regression for classification, this model streamlines accounting by reducing manual errors and providing real-time insights into financial data. Developed by Madushan Joel, it's designed for banks, financial institutions, and businesses looking to simplify their financial operations.",
       "img": "img/brmptcx.png",
